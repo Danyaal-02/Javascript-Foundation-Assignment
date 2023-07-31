@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Email:</label>
+        <input type="text">
+        <label for="">Password:</label>
+        <input type="password">
+        <button>Submit</button>
+        <p></p>
+    </form>
+    <script>
+        let btn=document.querySelector('button')
+        btn.addEventListener('click',check)
+        function check(){
+            event.preventDefault()
+            if(!((document.getElementsByTagName('input')[0].value).includes("@")) || (document.getElementsByTagName('input')[1].value).length<8){
+                document.getElementsByTagName('p')[0].innerText="Invalid email or password"
+                document.getElementsByTagName('p')[0].style.color="red"
+            }
+        }
+    </script>
+</body>
+</html>

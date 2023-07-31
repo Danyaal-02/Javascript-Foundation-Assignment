@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products = [{ productName: 'T-shirt', originalPrice: 23.0, discountedPrice: 15.0 },
+                        { productName: 'Shoes', originalPrice: 80.0, discountedPrice: 60.0 },
+                        { productName: 'Watch', originalPrice: 150.0, discountedPrice: 120.0 },
+                        { productName: 'Hat', originalPrice: 30.0, discountedPrice: 25.0 }]
+        const bill = (list) => {
+            for(i of list){
+                let discount=(((i.originalPrice-i.discountedPrice)/i.originalPrice)*100).toFixed(2)
+                list[list.indexOf(i)].discountPercent=parseFloat(discount)
+            }
+            return list
+        }
+        console.log(bill(products))
+    </script>
+</body>
+</html>

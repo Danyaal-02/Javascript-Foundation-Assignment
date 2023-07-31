@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>qwertyuio Lorem ipsum dolor sit, qwertyuio amet consectetur adipisicing elit. Voluptatibus officiis nemo minima rem sapiente repudiandae quod atque, ut alias, beatae qui doloremque quaerat! Deserunt aut praesentium earum doloribus? Aliquam, aspernatur.</p>
+    <script>
+        const paragraph = document.getElementsByTagName('p')[0];
+        const words = paragraph.innerText.split(' ');
+
+        for (let i = 0; i < words.length; i++) {
+            if (words[i].length > 8) {
+                words[i] = `<span style="background-color: yellow;">${words[i]}</span>`;
+            }
+        }
+
+        paragraph.innerHTML = words.join(' ');
+    </script>
+</body>
+</html>

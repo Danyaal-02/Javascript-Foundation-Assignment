@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cost={"economy":4000,"midsize":10000,"luxury":20000}
+        function rentalCost(type,days){
+            return(cost[type]*days)
+        }
+        let inputType=prompt("Enter the Car type")
+        let inputDays=prompt("Enter the no of Days")
+        console.log("The total cost is "+rentalCost(inputType,inputDays))
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let items=['a','b','c','d','e','f','b','d','c']
+        for(i of items){
+            let ind=items.indexOf(i)
+            let slc=items.slice(ind+1)
+            for(j of slc){
+                if(i==j){
+                delete items[ind]
+                }
+            }
+        }
+        const res = items.filter(item => {
+            return item;
+        })
+        console.log(res)
+    </script>
+</body>
+</html>

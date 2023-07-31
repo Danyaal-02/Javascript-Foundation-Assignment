@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vowels={'a':null,'A':null,'e':null,'E':null,'i':null,'I':null,'o':null,'O':null,'u':null,'U':null}
+        let input=prompt("Enter the Name")
+        let ctr=0
+        for(i of input){
+            if(i in vowels){
+                ctr++
+            }
+        }
+        alert(ctr)
+    </script>
+</body>
+</html>

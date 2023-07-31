@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="inp">
+    <ol id="learningList">
+        <!-- Additional list items can be added here -->
+    </ol>
+    <button id="addButton">Add Task</button>
+    <script>
+    let btn=document.querySelector('#addButton')
+    btn.addEventListener('click',addElement)
+    function addElement(){
+        const node = document.createElement("li")
+        const textnode = document.createTextNode(document.getElementById('inp').value)
+        node.appendChild(textnode)
+        document.getElementById("learningList").appendChild(node)
+        document.getElementById('inp').value=''
+    }
+    </script>
+</body>
+</html>

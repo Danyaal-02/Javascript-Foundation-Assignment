@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const prompt = require("prompt-sync")({ sigint: true })
+        let cel=Number(prompt("Enter the temperature in Celsius"))
+        function convert(temp){
+            let far=(temp*(9/5))+32
+            return far
+        }
+        console.log("The temperature in Farenheit is "+convert(cel))
+    </script>
+</body>
+</html>

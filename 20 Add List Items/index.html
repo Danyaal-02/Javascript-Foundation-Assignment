@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="learningList">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <!-- Additional list items can be added here -->
+      </ol>
+      <p></p>
+      <button id="addButton">Add Next Item</button>
+      <script>
+        let listItemsArray = ['HTML',
+                            'CSS',
+                            'JavaScript',
+                            'React',
+                            'Node.js',
+                            'Database',
+                            'Project Development']
+        let btn=document.querySelector('#addButton')
+        btn.addEventListener('click',addElement)
+        function addElement(){
+            if(listItemsArray.length===0){
+                document.getElementsByTagName('p')[0].innerText="All items have been added. No more items left"
+                return 0
+            }
+            const node = document.createElement("li")
+            const textnode = document.createTextNode(listItemsArray.shift())
+            node.appendChild(textnode)
+            document.getElementById("learningList").appendChild(node)
+        }
+      </script>
+</body>
+</html>

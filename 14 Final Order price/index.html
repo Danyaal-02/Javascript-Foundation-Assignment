@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ctr=0
+        const customerCart = [{ itemName: 'Laptop', unitPrice: 800, quantity: 2 },
+                            { itemName: 'Smartphone', unitPrice: 500, quantity: 3 },
+                            { itemName: 'Headphones', unitPrice: 50, quantity: 1 },
+                            { itemName: 'Mouse', unitPrice: 20, quantity: 4 }]
+        const bill = (cart) => {
+            for(i of cart){
+                ctr+=i.unitPrice*i.quantity
+            }
+            return ctr
+        }
+        console.log("Total Price is "+bill(customerCart))
+    </script>
+</body>
+</html>

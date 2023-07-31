@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let colors = {
+            "red":"1",
+            "blue":"2",
+            "yellow":"3"
+        }
+        let color1=prompt('Enter the 1st Color')
+        let color2=prompt('Enter the 2nd Color')
+        color1=colors[color1]+colors[color2]
+        switch(color1){
+            case "12":
+                alert('purple')
+                break
+            case "21":
+                alert('purple')
+                break
+            case "13":
+                alert('orange')
+                break
+            case "31":
+                alert('orange')
+                break
+            case "23":
+                alert('green')
+                break
+            case "32":
+                alert('green')
+                break
+        }
+    </script>
+</body>
+</html>

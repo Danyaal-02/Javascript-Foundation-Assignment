@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let account = {
+        name: 'John Doe',
+        balance: 5000.0
+        };
+        function deposit(amount){
+            account.balance+=amount
+            console.log("Deposited Successfully! ")
+            return 0
+        }
+        function withdraw(amount){
+            ((account.balance-amount)>=0)?(account.balance -= amount, console.log("Withdrawn Successfully!")):console.log("Insufficient Balance");
+            return 0
+        }
+        let action=prompt("Enter the type of transaction ")
+        if(action=="deposit"){
+            let dep=Number(prompt("Enter the amount to be deposited "))
+            deposit(dep)
+        }
+        else if(action=="withdraw"){
+            let wit=Number(prompt("Enter the amount to be withdrawn "))
+            withdraw(wit)
+        }
+        console.log(account)
+    </script>
+</body>
+</html>

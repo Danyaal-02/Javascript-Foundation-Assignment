@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let costCtr=0,peopleCtr=0,ctr=0,res
+        let num=prompt("Enter the no of dishes")
+        function split(cost,people){
+            costCtr+=cost
+            peopleCtr+=people
+            ctr++
+            if(ctr==num){
+                let total={"totalBill":null,"costPerPerson":null}
+                total.totalBill=costCtr
+                total.costPerPerson=costCtr/peopleCtr
+                return total
+            }
+            return 0
+        }
+        for(i=0;i<num;i++){
+            let cost=Number(prompt("Enter the cost "))
+            let people=Number(prompt("Enter the no of people sharing it "))
+            res=split(cost,people)
+        }
+        console.log(res)
+    </script>
+</body>
+</html>
